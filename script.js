@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Sign Up Form
+    
     document.getElementById("signup-form").addEventListener("submit", (event) => {
         event.preventDefault();
         const username = document.getElementById("signup-username").value;
         const email = document.getElementById("signup-email").value;
         const password = document.getElementById("signup-password").value;
 
-        // Store user details in localStorage (temporary storage)
+        
         localStorage.setItem("user", JSON.stringify({ username, email, password }));
         alert("Sign-up successful! You can now sign in.");
     });
 
-    // Sign In Form
+    
     document.getElementById("signin-form").addEventListener("submit", (event) => {
         event.preventDefault();
         const email = document.getElementById("signin-email").value;
@@ -30,7 +30,7 @@ function toggleDropdown() {
     document.getElementById("dropdownMenu").classList.toggle("show");
 }
 
-// Close dropdown if clicked outside
+
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-btn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
